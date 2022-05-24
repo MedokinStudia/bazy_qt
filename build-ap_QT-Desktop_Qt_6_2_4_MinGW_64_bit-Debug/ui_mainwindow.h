@@ -46,7 +46,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(209, 159);
+        MainWindow->resize(295, 184);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         horizontalLayout_3 = new QHBoxLayout(centralwidget);
@@ -91,9 +91,15 @@ public:
         splitter->setOrientation(Qt::Horizontal);
         pushButton = new QPushButton(splitter);
         pushButton->setObjectName(QString::fromUtf8("pushButton"));
+        pushButton->setStyleSheet(QString::fromUtf8("border-color: rgb(0, 85, 0);\n"
+"color: rgb(0, 0, 0);\n"
+"background-color: rgb(0, 255, 0);"));
         splitter->addWidget(pushButton);
         pushButton_2 = new QPushButton(splitter);
         pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
+        pushButton_2->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 20, 20);\n"
+"color: rgb(255, 255, 255);\n"
+"border-color: rgb(255, 0, 0);"));
         splitter->addWidget(pushButton_2);
 
         verticalLayout->addWidget(splitter);

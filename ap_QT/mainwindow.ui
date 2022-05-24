@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>209</width>
-    <height>159</height>
+    <width>295</width>
+    <height>184</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -59,11 +59,21 @@
           <enum>Qt::Horizontal</enum>
          </property>
          <widget class="QPushButton" name="pushButton">
+          <property name="styleSheet">
+           <string notr="true">border-color: rgb(0, 85, 0);
+color: rgb(0, 0, 0);
+background-color: rgb(0, 255, 0);</string>
+          </property>
           <property name="text">
            <string>Zaloguj</string>
           </property>
          </widget>
          <widget class="QPushButton" name="pushButton_2">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 20, 20);
+color: rgb(255, 255, 255);
+border-color: rgb(255, 0, 0);</string>
+          </property>
           <property name="text">
            <string>Wyjdź</string>
           </property>

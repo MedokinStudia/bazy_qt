@@ -39,6 +39,29 @@ void MainWindow::on_pushButton_clicked()
         hide();
         interfejs_kierownik->show();
     }
+    else
+        if(login == "technik" && haslo == "123")
+        {
+            interfejs_technika=new Interfejs_Technika(this);
+            hide();
+            interfejs_technika->show();
+        }
+        else
+            if(login == "kasjer" && haslo == "123")
+            {
+                interfejs_kasjera=new Interfejs_kasjera(this);
+                hide();
+                interfejs_kasjera->show();
+            }
+            else
+                if(login == "magazynier" && haslo == "123")
+                {
+                    interfejs_magazyniera=new Interfejs_magazyniera(this);
+                    hide();
+                    interfejs_magazyniera->show();
+                }
+                else
+                QMessageBox::information(this,"Zaloguj","Błedne logowanie");
 }
 
 

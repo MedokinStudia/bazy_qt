@@ -28,7 +28,7 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>383</width>
+         <width>391</width>
          <height>570</height>
         </rect>
        </property>
@@ -149,6 +149,10 @@
          <layout class="QHBoxLayout" name="horizontalLayout_2">
           <item>
            <widget class="QPushButton" name="pushButton_3">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(0, 255, 0);
+border-color: rgb(0, 85, 0);</string>
+            </property>
             <property name="text">
              <string>Dodaj Pracownika</string>
             </property>
@@ -156,6 +160,10 @@
           </item>
           <item>
            <widget class="QPushButton" name="pushButton_5">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(199, 255, 255);
+border-color: rgb(0, 0, 255);</string>
+            </property>
             <property name="text">
              <string>Modyfikuj Pracownika</string>
             </property>
@@ -163,6 +171,10 @@
           </item>
           <item>
            <widget class="QPushButton" name="pushButton_4">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(255, 38, 42);
+border-color: rgb(170, 0, 0);</string>
+            </property>
             <property name="text">
              <string>Usuń Pracownika</string>
             </property>
@@ -178,11 +190,20 @@
        <enum>Qt::Horizontal</enum>
       </property>
       <widget class="QPushButton" name="pushButton">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 0);
+border-color: rgb(255, 85, 0);</string>
+       </property>
        <property name="text">
         <string>Wyloguj</string>
        </property>
       </widget>
       <widget class="QPushButton" name="pushButton_2">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 20, 20);
+color: rgb(255, 255, 255);
+border-color: rgb(255, 0, 0);</string>
+       </property>
        <property name="text">
         <string>Wyjdź</string>
        </property>
@@ -204,8 +225,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>398</width>
-         <height>188</height>
+         <width>390</width>
+         <height>195</height>
         </rect>
        </property>
        <layout class="QGridLayout" name="gridLayout_2">
@@ -249,8 +270,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>398</width>
-         <height>198</height>
+         <width>390</width>
+         <height>195</height>
         </rect>
        </property>
        <layout class="QGridLayout" name="gridLayout_3">
@@ -295,8 +316,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>398</width>
-         <height>199</height>
+         <width>390</width>
+         <height>195</height>
         </rect>
        </property>
        <layout class="QGridLayout" name="gridLayout_4">

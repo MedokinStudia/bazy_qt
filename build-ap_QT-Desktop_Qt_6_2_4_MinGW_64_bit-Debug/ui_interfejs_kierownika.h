@@ -95,7 +95,7 @@ public:
         Zarzadzaj_Pracownikami->setWidgetResizable(true);
         scrollAreaWidgetContents_6 = new QWidget();
         scrollAreaWidgetContents_6->setObjectName(QString::fromUtf8("scrollAreaWidgetContents_6"));
-        scrollAreaWidgetContents_6->setGeometry(QRect(0, 0, 383, 570));
+        scrollAreaWidgetContents_6->setGeometry(QRect(0, 0, 391, 570));
         verticalLayout = new QVBoxLayout(scrollAreaWidgetContents_6);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         label = new QLabel(scrollAreaWidgetContents_6);
@@ -182,16 +182,22 @@ public:
         horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
         pushButton_3 = new QPushButton(scrollAreaWidgetContents_6);
         pushButton_3->setObjectName(QString::fromUtf8("pushButton_3"));
+        pushButton_3->setStyleSheet(QString::fromUtf8("background-color: rgb(0, 255, 0);\n"
+"border-color: rgb(0, 85, 0);"));
 
         horizontalLayout_2->addWidget(pushButton_3);
 
         pushButton_5 = new QPushButton(scrollAreaWidgetContents_6);
         pushButton_5->setObjectName(QString::fromUtf8("pushButton_5"));
+        pushButton_5->setStyleSheet(QString::fromUtf8("background-color: rgb(199, 255, 255);\n"
+"border-color: rgb(0, 0, 255);"));
 
         horizontalLayout_2->addWidget(pushButton_5);
 
         pushButton_4 = new QPushButton(scrollAreaWidgetContents_6);
         pushButton_4->setObjectName(QString::fromUtf8("pushButton_4"));
+        pushButton_4->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 38, 42);\n"
+"border-color: rgb(170, 0, 0);"));
 
         horizontalLayout_2->addWidget(pushButton_4);
 
@@ -205,9 +211,14 @@ public:
         splitter_2->setOrientation(Qt::Horizontal);
         pushButton = new QPushButton(splitter_2);
         pushButton->setObjectName(QString::fromUtf8("pushButton"));
+        pushButton->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 0);\n"
+"border-color: rgb(255, 85, 0);"));
         splitter_2->addWidget(pushButton);
         pushButton_2 = new QPushButton(splitter_2);
         pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
+        pushButton_2->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 20, 20);\n"
+"color: rgb(255, 255, 255);\n"
+"border-color: rgb(255, 0, 0);"));
         splitter_2->addWidget(pushButton_2);
         splitter_3->addWidget(splitter_2);
 
@@ -221,7 +232,7 @@ public:
         Wyswietl_Transakcje->setWidgetResizable(true);
         scrollAreaWidgetContents_3 = new QWidget();
         scrollAreaWidgetContents_3->setObjectName(QString::fromUtf8("scrollAreaWidgetContents_3"));
-        scrollAreaWidgetContents_3->setGeometry(QRect(0, 0, 398, 188));
+        scrollAreaWidgetContents_3->setGeometry(QRect(0, 0, 390, 195));
         gridLayout_2 = new QGridLayout(scrollAreaWidgetContents_3);
         gridLayout_2->setObjectName(QString::fromUtf8("gridLayout_2"));
         plainTextEdit_2 = new QPlainTextEdit(scrollAreaWidgetContents_3);
@@ -253,7 +264,7 @@ public:
         Wyswietl_Gry->setWidgetResizable(true);
         scrollAreaWidgetContents_4 = new QWidget();
         scrollAreaWidgetContents_4->setObjectName(QString::fromUtf8("scrollAreaWidgetContents_4"));
-        scrollAreaWidgetContents_4->setGeometry(QRect(0, 0, 398, 198));
+        scrollAreaWidgetContents_4->setGeometry(QRect(0, 0, 390, 195));
         gridLayout_3 = new QGridLayout(scrollAreaWidgetContents_4);
         gridLayout_3->setObjectName(QString::fromUtf8("gridLayout_3"));
         label_3 = new QLabel(scrollAreaWidgetContents_4);
@@ -285,7 +296,7 @@ public:
         Wyswietl_Egzemplarze->setWidgetResizable(true);
         scrollAreaWidgetContents_5 = new QWidget();
         scrollAreaWidgetContents_5->setObjectName(QString::fromUtf8("scrollAreaWidgetContents_5"));
-        scrollAreaWidgetContents_5->setGeometry(QRect(0, 0, 398, 199));
+        scrollAreaWidgetContents_5->setGeometry(QRect(0, 0, 390, 195));
         gridLayout_4 = new QGridLayout(scrollAreaWidgetContents_5);
         gridLayout_4->setObjectName(QString::fromUtf8("gridLayout_4"));
         plainTextEdit_4 = new QPlainTextEdit(scrollAreaWidgetContents_5);
