@@ -17,11 +17,12 @@ public:
 
 private slots:
     void on_pushButton_2_clicked();
-
+    void on_pushButton_1_clicked();
     void on_pushButton_5_clicked();
 
 private:
     Ui::Interfejs_Technika *ui;
+
 };
 
 #endif // INTERFEJS_TECHNIKA_H

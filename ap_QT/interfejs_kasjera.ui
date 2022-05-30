@@ -51,7 +51,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="lineEdit_15">
+        <widget class="QLineEdit" name="lineEdit_IDTransakcji">
          <property name="text">
           <string/>
          </property>
@@ -65,7 +65,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="lineEdit_16">
+        <widget class="QLineEdit" name="lineEdit_IDEgzemplarza">
          <property name="text">
           <string/>
          </property>
@@ -79,7 +79,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="lineEdit_17">
+        <widget class="QLineEdit" name="lineEdit_Tytul">
          <property name="text">
           <string/>
          </property>
@@ -93,7 +93,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="lineEdit_18">
+        <widget class="QLineEdit" name="lineEdit_Wydawca">
          <property name="text">
           <string/>
          </property>
@@ -107,7 +107,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="lineEdit_19">
+        <widget class="QLineEdit" name="lineEdit_Gatunek">
          <property name="text">
           <string/>
          </property>
@@ -121,7 +121,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="lineEdit_20">
+        <widget class="QLineEdit" name="lineEdit_Pegi">
          <property name="text">
           <string/>
          </property>
@@ -135,7 +135,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="lineEdit_21">
+        <widget class="QLineEdit" name="lineEdit_RokWydania">
          <property name="text">
           <string/>
          </property>
@@ -149,7 +149,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="lineEdit_22"/>
+        <widget class="QLineEdit" name="lineEdit_Kwota"/>
        </item>
        <item>
         <layout class="QHBoxLayout" name="horizontalLayout_4">

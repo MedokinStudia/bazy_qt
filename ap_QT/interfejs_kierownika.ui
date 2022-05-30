@@ -29,7 +29,7 @@
          <x>0</x>
          <y>0</y>
          <width>391</width>
-         <height>570</height>
+         <height>553</height>
         </rect>
        </property>
        <layout class="QVBoxLayout" name="verticalLayout">
@@ -55,7 +55,7 @@
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="lineEdit_7">
+         <widget class="QLineEdit" name="lineEdit_ID">
           <property name="text">
            <string/>
           </property>
@@ -69,7 +69,7 @@
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="lineEdit">
+         <widget class="QLineEdit" name="lineEdit_Imie">
           <property name="text">
            <string/>
           </property>
@@ -83,7 +83,7 @@
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="lineEdit_2">
+         <widget class="QLineEdit" name="lineEdit_Nazwisko">
           <property name="text">
            <string/>
           </property>
@@ -97,7 +97,7 @@
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="lineEdit_3">
+         <widget class="QLineEdit" name="lineEdit_NrTelefonu">
           <property name="text">
            <string/>
           </property>
@@ -111,7 +111,7 @@
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="lineEdit_4">
+         <widget class="QLineEdit" name="lineEdit_Login">
           <property name="text">
            <string/>
           </property>
@@ -125,7 +125,7 @@
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="lineEdit_5">
+         <widget class="QLineEdit" name="lineEdit_Haslo">
           <property name="text">
            <string/>
           </property>
@@ -139,7 +139,7 @@
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="lineEdit_6">
+         <widget class="QLineEdit" name="lineEdit_Stanowisko">
           <property name="text">
            <string/>
           </property>

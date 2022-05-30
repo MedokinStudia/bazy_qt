@@ -1,5 +1,6 @@
 #include "interfejs_magazyniera.h"
 #include "ui_interfejs_magazyniera.h"
+#include "mainwindow.h"
 #include <QMessageBox>
 
 Interfejs_magazyniera::Interfejs_magazyniera(QWidget *parent) :
@@ -19,6 +20,12 @@ void Interfejs_magazyniera::on_pushButton_2_clicked()
     close();
 }
 
+void Interfejs_magazyniera::on_pushButton_1_clicked()
+{
+    close();
+    QWidget *mainwindow=new MainWindow;
+    mainwindow->show();
+}
 
 void Interfejs_magazyniera::on_pushButton_8_clicked()
 {
@@ -31,8 +38,28 @@ void Interfejs_magazyniera::on_pushButton_8_clicked()
     QString Ilosc_sztuk = ui->lineEdit_Ilosc_sztuk->text();
 
 
-    if(ID_Egz == "1" && ID_Gry == "1" && Cena == "100" && Platforma == "1" && Status == "1" && Stan == "1" && Ilosc_sztuk == "1")
-        QMessageBox::information(this,"Informacja","Poprawnie dodano");
+    if(ID_Egz.size()>0 && ID_Gry.size()>0 && Cena.size()>0 && Platforma.size()>0 && Status.size()>0 && Stan.size()>0 && Ilosc_sztuk.size()>0)
+    {
+    switch( QMessageBox::question(
+                this,
+                tr("Potwierdzenie"),
+                tr("Czy na pewno chcesz dodać ten egzemplarz?"),
+
+                QMessageBox::Yes |
+
+                QMessageBox::Cancel ) )
+    {
+      case QMessageBox::Yes:
+         QMessageBox::information(this,"Informacja","Poprawnie dodano");
+        break;
+      case QMessageBox::Cancel:
+        qDebug( "cancel" );
+        break;
+      default:
+        qDebug( "close" );
+        break;
+    }
+    }
     else
         QMessageBox::information(this,"Informacja","Błąd przy dodawaniu");
 }
@@ -42,8 +69,28 @@ void Interfejs_magazyniera::on_pushButton_6_clicked()
 {
     QString ID_Egz = ui->lineEdit_ID_Egzempalrza->text();
 
-    if(ID_Egz == "1")
-        QMessageBox::information(this,"Informacja","Poprawnie usunięto");
+    if(ID_Egz.size()>0)
+    {
+    switch( QMessageBox::question(
+                this,
+                tr("Potwierdzenie"),
+                tr("Czy na pewno chcesz usunąć ten egzemplarz?"),
+
+                QMessageBox::Yes |
+
+                QMessageBox::Cancel ) )
+    {
+      case QMessageBox::Yes:
+         QMessageBox::information(this,"Informacja","Poprawnie usunięto");
+        break;
+      case QMessageBox::Cancel:
+        qDebug( "cancel" );
+        break;
+      default:
+        qDebug( "close" );
+        break;
+    }
+    }
     else
         QMessageBox::information(this,"Informacja","Błąd przy usuwaniu");
 }
@@ -59,8 +106,29 @@ void Interfejs_magazyniera::on_pushButton_7_clicked()
     QString Rok_wydania = ui->lineEdit_Rok_Wydania->text();
 
 
-    if(ID_Gry == "1" && Tytul == "1" && Wydawca== "1" && Gatunek == "1" && Pegi == "1" && Rok_wydania == "1")
-        QMessageBox::information(this,"Informacja","Poprawnie dodano");
+    if(ID_Gry.size()>0 && Tytul.size()>0 && Wydawca.size()>0 && Gatunek.size()>0 && Pegi.size()>0 && Rok_wydania.size()>0)
+
+    {
+    switch( QMessageBox::question(
+                this,
+                tr("Potwierdzenie"),
+                tr("Czy na pewno chcesz dodać tą grę?"),
+
+                QMessageBox::Yes |
+
+                QMessageBox::Cancel ) )
+    {
+      case QMessageBox::Yes:
+         QMessageBox::information(this,"Informacja","Poprawnie dodano");
+        break;
+      case QMessageBox::Cancel:
+        qDebug( "cancel" );
+        break;
+      default:
+        qDebug( "close" );
+        break;
+    }
+    }
     else
         QMessageBox::information(this,"Informacja","Błąd przy dodawaniu");
 }
@@ -69,8 +137,28 @@ void Interfejs_magazyniera::on_pushButton_7_clicked()
 void Interfejs_magazyniera::on_pushButton_5_clicked()
 {
     QString ID_Gry = ui->lineEdit_ID_Gry_2->text();
-    if(ID_Gry == "1")
-        QMessageBox::information(this,"Informacja","Poprawnie usunieto");
+    if(ID_Gry.size()>0)
+    {
+    switch( QMessageBox::question(
+                this,
+                tr("Potwierdzenie"),
+                tr("Czy na pewno chcesz usunąć tą grę?"),
+
+                QMessageBox::Yes |
+
+                QMessageBox::Cancel ) )
+    {
+      case QMessageBox::Yes:
+         QMessageBox::information(this,"Informacja","Poprawnie usunieto");
+        break;
+      case QMessageBox::Cancel:
+        qDebug( "cancel" );
+        break;
+      default:
+        qDebug( "close" );
+        break;
+    }
+    }
     else
         QMessageBox::information(this,"Informacja","Błąd przy usuwaniu");
 }
