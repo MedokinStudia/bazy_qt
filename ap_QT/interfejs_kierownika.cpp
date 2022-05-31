@@ -143,3 +143,11 @@ void Interfejs_kierownika::on_pushButton_4_clicked()
         QMessageBox::information(this,"Informacja","Błąd przy usuwaniu");
 }
 
+
+void Interfejs_kierownika::on_pushButton_6_clicked()
+{
+    close();
+    QWidget *edit_tabele=new tabele;
+    edit_tabele->show();
+}
+

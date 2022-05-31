@@ -6,6 +6,7 @@
 #include "interfejs_technika.h"
 #include "interfejs_kasjera.h"
 #include "interfejs_magazyniera.h"
+#include "tabele.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -32,5 +33,6 @@ private:
     Interfejs_Technika *interfejs_technika;
     Interfejs_kasjera *interfejs_kasjera;
     Interfejs_magazyniera *interfejs_magazyniera;
+    tabele *tabela;
 };
 #endif // MAINWINDOW_H

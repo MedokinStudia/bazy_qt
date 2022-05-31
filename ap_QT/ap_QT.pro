@@ -14,21 +14,24 @@ SOURCES += \
     interfejs_magazyniera.cpp \
     interfejs_technika.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    tabele.cpp
 
 HEADERS += \
     interfejs_kasjera.h \
     interfejs_kierownika.h \
     interfejs_magazyniera.h \
     interfejs_technika.h \
-    mainwindow.h
+    mainwindow.h \
+    tabele.h
 
 FORMS += \
     interfejs_kasjera.ui \
     interfejs_kierownika.ui \
     interfejs_magazyniera.ui \
     interfejs_technika.ui \
-    mainwindow.ui
+    mainwindow.ui \
+    tabele.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
