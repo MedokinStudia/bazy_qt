@@ -55,6 +55,7 @@ void Interfejs_kierownika::on_pushButton_3_clicked()
     {
       case QMessageBox::Yes:
          QMessageBox::information(this,"Informacja","Poprawnie dodano");
+         //Funckja z sql z dodaniem pracownika
         break;
       case QMessageBox::Cancel:
         qDebug( "cancel" );
