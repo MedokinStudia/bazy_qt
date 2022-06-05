@@ -38,7 +38,9 @@ void Interfejs_kierownika::on_pushButton_3_clicked()
     QString Login = ui->lineEdit_Login->text();
     QString Haslo = ui->lineEdit_Haslo->text();
     QString Stanowisko = ui->lineEdit_Stanowisko->text();
-
+    int IDPrac=ID_pracownika.toInt();
+    int Nrtel=NrTelefonu.toInt();
+    int IDStanowisko=Stanowisko.toInt();
 
     if(ID_pracownika.size()>0 && Imie.size()>0 && Nazwisko.size()>0 && NrTelefonu.size()>0 && Login.size()>0 && Haslo.size()>0)
     {
@@ -55,7 +57,7 @@ void Interfejs_kierownika::on_pushButton_3_clicked()
     {
       case QMessageBox::Yes:
          QMessageBox::information(this,"Informacja","Poprawnie dodano");
-         //Funckja z sql z dodaniem pracownika
+         //INSERT INTO `pracownik` (`IDPracownika`, `Imie`, `Nazwisko`, `NrTel`, `Login`, `Haslo`, `Stanowisko`) VALUES (IDPrac,Imie, Nazwisko, Nrtel, Login, Haslo, IDStanowisko)
         break;
       case QMessageBox::Cancel:
         qDebug( "cancel" );
@@ -79,7 +81,9 @@ void Interfejs_kierownika::on_pushButton_5_clicked()
     QString Login = ui->lineEdit_Login->text();
     QString Haslo = ui->lineEdit_Haslo->text();
     QString Stanowisko = ui->lineEdit_Stanowisko->text();
-
+    int IDPrac=ID_pracownika.toInt();
+    int Nrtel=NrTelefonu.toInt();
+    int IDStanowisko=Stanowisko.toInt();
 
     if(ID_pracownika.size()>0 && Imie.size()>0 && Nazwisko.size()>0 && NrTelefonu.size()>0 && Login.size()>0 && Haslo.size()>0)
     {
@@ -96,6 +100,7 @@ void Interfejs_kierownika::on_pushButton_5_clicked()
     {
       case QMessageBox::Yes:
          QMessageBox::information(this,"Informacja","Poprawnie zmodyfikowano");
+         //UPDATE `pracownik` SET `IDPracownika` = IDPrac, `Imie` = Imie, `Nazwisko` = Nazwisko, `NrTel` = Nrtel, `Login` = Login, `Haslo` = Haslo, `Stanowisko` = IDStanowisko WHERE `pracownik`.`IDPracownika` = IDPrac
         break;
       case QMessageBox::Cancel:
         qDebug( "cancel" );
@@ -114,7 +119,7 @@ void Interfejs_kierownika::on_pushButton_5_clicked()
 void Interfejs_kierownika::on_pushButton_4_clicked()
 {
     QString ID_pracownika = ui->lineEdit_ID->text();
-
+    int IDPrac=ID_pracownika.toInt();
 
 
     if(ID_pracownika.size()>0 )
@@ -131,6 +136,7 @@ void Interfejs_kierownika::on_pushButton_4_clicked()
     {
       case QMessageBox::Yes:
          QMessageBox::information(this,"Informacja","Poprawnie usunięto");
+         //DELETE FROM pracownik WHERE `pracownik`.`IDPracownika` = IDPrac
         break;
       case QMessageBox::Cancel:
         qDebug( "cancel" );

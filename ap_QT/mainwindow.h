@@ -7,7 +7,8 @@
 #include "interfejs_kasjera.h"
 #include "interfejs_magazyniera.h"
 #include "tabele.h"
-
+#include <QtSql>
+#include <QSqlDatabase>
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE

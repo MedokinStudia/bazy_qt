@@ -32,8 +32,13 @@ void MainWindow::changeWindow()
 
 void MainWindow::on_pushButton_clicked()
 {
+    QSqlDatabase database = QSqlDatabase::addDatabase("QMYSQL");
     QString login = ui->lineEdit_login->text();
     QString haslo = ui-> lineEdit_haslo->text();
+    database.setHostName("localhost");
+    database.setUserName(login);
+    database.setPassword(haslo);
+    database.setDatabaseName("projekt");
     if(login == "kierownik" && haslo == "123")
     {
         interfejs_kierownik=new Interfejs_kierownika(this);
@@ -63,6 +68,7 @@ void MainWindow::on_pushButton_clicked()
                 }
                 else
                 QMessageBox::information(this,"Zaloguj","Błedne logowanie");
+
 }
 
 

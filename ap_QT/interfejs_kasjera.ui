@@ -37,11 +37,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QPlainTextEdit" name="plainTextEdit_12">
-         <property name="plainText">
-          <string>Wyświetl Transackje</string>
-         </property>
-        </widget>
+        <widget class="QTableWidget" name="tableWidget"/>
        </item>
        <item>
         <widget class="QLabel" name="label_27">
@@ -72,28 +68,14 @@
         </widget>
        </item>
        <item>
-        <widget class="QLabel" name="label_29">
-         <property name="text">
-          <string>Tytuł</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLineEdit" name="lineEdit_Tytul">
-         <property name="text">
-          <string/>
-         </property>
-        </widget>
-       </item>
-       <item>
         <widget class="QLabel" name="label_30">
          <property name="text">
-          <string>Wydawca</string>
+          <string>ID Pracownika</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="lineEdit_Wydawca">
+        <widget class="QLineEdit" name="lineEdit_IDPracownika">
          <property name="text">
           <string/>
          </property>
@@ -102,54 +84,66 @@
        <item>
         <widget class="QLabel" name="label_31">
          <property name="text">
-          <string>Gatunek</string>
+          <string>Opis</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="lineEdit_Gatunek">
+        <widget class="QLineEdit" name="lineEdit_Opis">
          <property name="text">
           <string/>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QLabel" name="label_32">
+        <widget class="QLabel" name="label">
          <property name="text">
-          <string>Pegi</string>
+          <string>IDGry</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="lineEdit_Pegi">
+        <widget class="QLineEdit" name="lineEdit_IDGry"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_2">
          <property name="text">
-          <string/>
+          <string>Platforma</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QLabel" name="label_33">
+        <widget class="QLineEdit" name="lineEdit_Platforma"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_3">
          <property name="text">
-          <string>Rok Wydania</string>
+          <string>Stan</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="lineEdit_RokWydania">
+        <widget class="QLineEdit" name="lineEdit_Stan"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_4">
          <property name="text">
-          <string/>
+          <string>Status</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QLabel" name="label_23">
+        <widget class="QLineEdit" name="lineEdit_4"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_5">
          <property name="text">
-          <string>Kwota</string>
+          <string>Cena</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="lineEdit_Kwota"/>
+        <widget class="QLineEdit" name="lineEdit_cena"/>
        </item>
        <item>
         <layout class="QHBoxLayout" name="horizontalLayout_4">
@@ -211,14 +205,7 @@ border-color: rgb(170, 0, 0);</string>
         </rect>
        </property>
        <layout class="QGridLayout" name="gridLayout_9">
-        <item row="1" column="0">
-         <widget class="QPlainTextEdit" name="plainTextEdit_10">
-          <property name="plainText">
-           <string>Wyświetl Egzemplarze</string>
-          </property>
-         </widget>
-        </item>
-        <item row="1" column="1">
+        <item row="2" column="1">
          <widget class="QScrollBar" name="verticalScrollBar_8">
           <property name="orientation">
            <enum>Qt::Vertical</enum>
@@ -232,12 +219,15 @@ border-color: rgb(170, 0, 0);</string>
           </property>
          </widget>
         </item>
-        <item row="2" column="0">
+        <item row="3" column="0">
          <widget class="QScrollBar" name="horizontalScrollBar_8">
           <property name="orientation">
            <enum>Qt::Horizontal</enum>
           </property>
          </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QTableWidget" name="tableWidget_3"/>
         </item>
        </layout>
       </widget>
@@ -256,13 +246,6 @@ border-color: rgb(170, 0, 0);</string>
         </rect>
        </property>
        <layout class="QGridLayout" name="gridLayout_10">
-        <item row="1" column="1">
-         <widget class="QScrollBar" name="verticalScrollBar_9">
-          <property name="orientation">
-           <enum>Qt::Vertical</enum>
-          </property>
-         </widget>
-        </item>
         <item row="0" column="0">
          <widget class="QLabel" name="label_25">
           <property name="text">
@@ -270,19 +253,22 @@ border-color: rgb(170, 0, 0);</string>
           </property>
          </widget>
         </item>
-        <item row="1" column="0">
-         <widget class="QPlainTextEdit" name="plainTextEdit_11">
-          <property name="plainText">
-           <string>Wyświetl GRy</string>
-          </property>
-         </widget>
-        </item>
-        <item row="2" column="0">
+        <item row="3" column="0">
          <widget class="QScrollBar" name="horizontalScrollBar_9">
           <property name="orientation">
            <enum>Qt::Horizontal</enum>
           </property>
          </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QScrollBar" name="verticalScrollBar_9">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QTableWidget" name="tableWidget_2"/>
         </item>
        </layout>
       </widget>

@@ -28,15 +28,15 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>274</width>
-         <height>505</height>
+         <width>153</width>
+         <height>502</height>
         </rect>
        </property>
        <layout class="QVBoxLayout" name="verticalLayout">
         <item>
          <widget class="QLabel" name="label">
           <property name="text">
-           <string>Modyfiluj_Egzemplarze</string>
+           <string>Modyfikuj_Egzemplarze</string>
           </property>
          </widget>
         </item>
@@ -48,10 +48,27 @@
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="lineEdit_ID">
-          <property name="text">
-           <string/>
-          </property>
+         <widget class="QComboBox" name="comboBox_3">
+          <item>
+           <property name="text">
+            <string>2 - Wiedźmin</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>4 - Gwint</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>6 - Wiedźmin 2</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>7 - Wiedźmin 3</string>
+           </property>
+          </item>
          </widget>
         </item>
         <item>
@@ -62,10 +79,17 @@
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="lineEdit_Stan">
-          <property name="text">
-           <string/>
-          </property>
+         <widget class="QComboBox" name="comboBox">
+          <item>
+           <property name="text">
+            <string>1-Nowy</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>2-Używany</string>
+           </property>
+          </item>
          </widget>
         </item>
         <item>
@@ -76,10 +100,17 @@
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="lineEdit_Status">
-          <property name="text">
-           <string/>
-          </property>
+         <widget class="QComboBox" name="comboBox_2">
+          <item>
+           <property name="text">
+            <string>1-Jest</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>2-Nie ma</string>
+           </property>
+          </item>
          </widget>
         </item>
         <item>
@@ -157,7 +188,7 @@ border-color: rgb(255, 0, 0);</string>
      </property>
      <layout class="QHBoxLayout" name="horizontalLayout">
       <item>
-       <widget class="QListView" name="listView"/>
+       <widget class="QTableWidget" name="tableWidget"/>
       </item>
      </layout>
     </widget>

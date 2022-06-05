@@ -30,15 +30,15 @@ void Interfejs_kasjera::on_pushButton_14_clicked()
 void Interfejs_kasjera::on_pushButton_11_clicked()
 {
     QString ID_Transakcji = ui->lineEdit_IDTransakcji->text();
-    QString Tytul = ui->lineEdit_Tytul->text();
+    QString ID_Pracownika= ui->lineEdit_IDPracownika->text();
     QString ID_Egzemplarza = ui->lineEdit_IDEgzemplarza->text();
-    QString Gatunek = ui->lineEdit_Gatunek->text();
-    QString Pegi = ui->lineEdit_Pegi->text();
-    QString Rok_wydania = ui->lineEdit_RokWydania->text();
-    QString Kwota = ui->lineEdit_Kwota->text();
+    QString Opis = ui->lineEdit_Opis->text();
+    int IDTrans=ID_Transakcji.toInt();
+    int IDPrac=ID_Pracownika.toInt();
+    int IDEgzemp=ID_Egzemplarza.toInt();
 
 
-    if(ID_Transakcji.size()>0 && Tytul.size()>0 && ID_Egzemplarza.size()>0 && Gatunek.size()>0 && Pegi.size()>0 && Rok_wydania.size()>0&&Kwota.size()>0)
+    if(ID_Transakcji.size()>0 && ID_Pracownika.size()>0 && ID_Egzemplarza.size()>0 && Opis.size()>0)
 
     {
     switch( QMessageBox::question(
@@ -51,7 +51,9 @@ void Interfejs_kasjera::on_pushButton_11_clicked()
                 QMessageBox::Cancel ) )
     {
       case QMessageBox::Yes:
+
          QMessageBox::information(this,"Informacja","Poprawnie sprzedano");
+         //INSERT INTO `transakcja` (`IDTransakcji`, `IDPracownika`, `IDEgzemplarza`, `Typtransakcji`, `Opis`) VALUES (IDTrans, IDPrac, IDEgzemp, 1, Opis)
         break;
       case QMessageBox::Cancel:
         qDebug( "cancel" );
@@ -67,15 +69,23 @@ void Interfejs_kasjera::on_pushButton_11_clicked()
 void Interfejs_kasjera::on_pushButton_12_clicked()
 {
     QString ID_Transakcji = ui->lineEdit_IDTransakcji->text();
-    QString Tytul = ui->lineEdit_Tytul->text();
+    QString ID_Pracownika= ui->lineEdit_IDPracownika->text();
     QString ID_Egzemplarza = ui->lineEdit_IDEgzemplarza->text();
-    QString Gatunek = ui->lineEdit_Gatunek->text();
-    QString Pegi = ui->lineEdit_Pegi->text();
-    QString Rok_wydania = ui->lineEdit_RokWydania->text();
-    QString Kwota = ui->lineEdit_Kwota->text();
-
-
-    if(ID_Transakcji.size()>0 && Tytul.size()>0 && ID_Egzemplarza.size()>0 && Gatunek.size()>0 && Pegi.size()>0 && Rok_wydania.size()>0&&Kwota.size()>0)
+    QString Opis = ui->lineEdit_Opis->text();
+    QString IDGry = ui->lineEdit_IDGry->text();
+    QString Platforma = ui->lineEdit_Platforma->text();
+    QString Stan = ui->lineEdit_Stan->text();
+    QString Status = ui->lineEdit_4->text();
+    QString Cena = ui->lineEdit_cena->text();
+    int IDTrans=ID_Transakcji.toInt();
+    int IDPrac=ID_Pracownika.toInt();
+    int IDEgzemp=ID_Egzemplarza.toInt();
+    int IDgierki=IDGry.toInt();
+    int IDPlatformy=Platforma.toInt();
+    int IDStanu=Stan.toInt();
+    int IDStatusu=Status.toInt();
+    int cena=Cena.toInt();
+   if(ID_Transakcji.size()>0 && ID_Pracownika.size()>0 && ID_Egzemplarza.size()>0 && Opis.size()>0)
 
     {
     switch( QMessageBox::question(
@@ -89,6 +99,8 @@ void Interfejs_kasjera::on_pushButton_12_clicked()
     {
       case QMessageBox::Yes:
          QMessageBox::information(this,"Informacja","Poprawnie zakupiono");
+         //INSERT INTO `transakcja` (`IDTransakcji`, `IDPracownika`, `IDEgzemplarza`, `Typtransakcji`, `Opis`) VALUES (IDTrans, IDPrac, IDEgzemp, 2, Opis)
+         //INSERT INTO `egzemplarz` (`IDEgzemplarza`, `IDGry`, `Cena`, `Platforma`, `Stan`, `Status`, `Ilosc`, `Opis`) VALUES (IDEgzemp, IDgierki,Cena, IDPlatformy, IDStanu, IDStatusu, 1, '')
         break;
       case QMessageBox::Cancel:
         qDebug( "cancel" );
@@ -104,7 +116,7 @@ void Interfejs_kasjera::on_pushButton_12_clicked()
 void Interfejs_kasjera::on_pushButton_13_clicked()
 {
     QString ID_Transakcji = ui->lineEdit_IDTransakcji->text();
-
+    int IDTrans=ID_Transakcji.toInt();
 
 
     if(ID_Transakcji.size()>0)
@@ -121,6 +133,7 @@ void Interfejs_kasjera::on_pushButton_13_clicked()
     {
       case QMessageBox::Yes:
          QMessageBox::information(this,"Informacja","Poprawnie usunięto");
+         //DELETE FROM transakcja WHERE `transakcja`.`IDTransakcji` = IDTrans
         break;
       case QMessageBox::Cancel:
         qDebug( "cancel" );
