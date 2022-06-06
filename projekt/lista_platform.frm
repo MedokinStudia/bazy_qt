@@ -1,0 +1,16 @@
+TYPE=VIEW
+query=select `projekt`.`platforma`.`IDPlatformy` AS `IDPlatformy`,`projekt`.`platforma`.`Platforma` AS `Platforma` from `projekt`.`platforma`
+md5=e0460f5458bb6d632c6f018b9d53c316
+updatable=1
+algorithm=0
+definer_user=root
+definer_host=localhost
+suid=1
+with_check_option=0
+timestamp=2022-06-06 11:13:50
+create-version=2
+source=select `platforma`.`IDPlatformy` AS `IDPlatformy`,`platforma`.`Platforma` AS `Platforma` from `platforma`
+client_cs_name=utf8mb4
+connection_cl_name=utf8mb4_unicode_ci
+view_body_utf8=select `projekt`.`platforma`.`IDPlatformy` AS `IDPlatformy`,`projekt`.`platforma`.`Platforma` AS `Platforma` from `projekt`.`platforma`
+mariadb-version=100424
