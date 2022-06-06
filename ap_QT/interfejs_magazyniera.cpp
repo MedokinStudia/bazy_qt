@@ -2,12 +2,20 @@
 #include "ui_interfejs_magazyniera.h"
 #include "mainwindow.h"
 #include <QMessageBox>
+QSqlDatabase database;
 
 Interfejs_magazyniera::Interfejs_magazyniera(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::Interfejs_magazyniera)
 {
     ui->setupUi(this);
+    if (database.open())
+    {
+        if(database.isValid())
+        {
+          QMessageBox::information(this,"Connection","Database Connected Success");
+        }
+    }
 }
 
 Interfejs_magazyniera::~Interfejs_magazyniera()
@@ -55,8 +63,21 @@ void Interfejs_magazyniera::on_pushButton_8_clicked()
                 QMessageBox::Cancel ) )
     {
       case QMessageBox::Yes:
+    {
          QMessageBox::information(this,"Informacja","Poprawnie dodano");
-          //INSERT INTO `egzemplarz` (`IDEgzemplarza`, `IDGry`, `Cena`, `Platforma`, `Stan`, `Status`, `Ilosc`, `Opis`) VALUES (IDegzemp, IDgierki, cena, IDPlat, IDstatusu, IDstanu, Ilosc, '')
+         database.open();
+         QSqlQuery query(database);
+         query.prepare("INSERT INTO `egzemplarz` (`IDEgzemplarza`, `IDGry`, `Cena`, `Platforma`, `Stan`, `Status`, `Ilosc`, `Opis`)"
+         "VALUES (:IDegzemp, :IDgierki, :cena, :IDPlat, :IDstatusu, :IDstanu, :Ilosc, '')");
+         query.bindValue(":IDegzemp",IDegzemp);
+         query.bindValue(":IDgierki",IDgierki);
+         query.bindValue(":cena",cena);
+         query.bindValue(":IDPlat",IDPlat);
+         query.bindValue(":IDstatusu",IDstatusu);
+         query.bindValue(":IDstanu",IDstanu);
+         query.bindValue(":Ilosc",Ilosc);
+         query.exec();
+    }
         break;
       case QMessageBox::Cancel:
         qDebug( "cancel" );

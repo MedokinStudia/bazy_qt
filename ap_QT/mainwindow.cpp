@@ -2,6 +2,9 @@
 #include "ui_mainwindow.h"
 #include "interfejs_technika.h"
 #include <QMessageBox>
+#include <QtSql>
+#include <QSqlDatabase>
+#include <QSqlQuery>
 #include <string>
 
 MainWindow::MainWindow(QWidget *parent)
@@ -32,13 +35,28 @@ void MainWindow::changeWindow()
 
 void MainWindow::on_pushButton_clicked()
 {
-    QSqlDatabase database = QSqlDatabase::addDatabase("QMYSQL");
+    QSqlDatabase database = QSqlDatabase::addDatabase("QSQLITE");
     QString login = ui->lineEdit_login->text();
     QString haslo = ui-> lineEdit_haslo->text();
-    database.setHostName("localhost");
-    database.setUserName(login);
-    database.setPassword(haslo);
+    database.setHostName("127.0.0.1");
+    database.setPort(8080);
+    database.setUserName("Magazynier");
+    database.setPassword("123");
     database.setDatabaseName("projekt");
+    QSqlQuery query(database);
+
+    if (database.open())
+    {
+        if(database.isValid())
+        {
+          QMessageBox::information(this,"Connection","database.userName()");
+          query.exec("SELECT * FROM `egzemplarz`");
+          qDebug() << query.lastError();
+        }
+    }
+    else {
+        QMessageBox::information(this,"Fuck","Fuck");
+    }
     if(login == "kierownik" && haslo == "123")
     {
         interfejs_kierownik=new Interfejs_kierownika(this);
@@ -60,7 +78,7 @@ void MainWindow::on_pushButton_clicked()
                 interfejs_kasjera->show();
             }
             else
-                if(login == "magazynier" && haslo == "123")
+                if(login == "Magazynier" && haslo == "123")
                 {
                     interfejs_magazyniera=new Interfejs_magazyniera(this);
                     hide();

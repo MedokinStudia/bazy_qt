@@ -48,28 +48,7 @@
          </widget>
         </item>
         <item>
-         <widget class="QComboBox" name="comboBox_3">
-          <item>
-           <property name="text">
-            <string>2 - Wiedźmin</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>4 - Gwint</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>6 - Wiedźmin 2</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>7 - Wiedźmin 3</string>
-           </property>
-          </item>
-         </widget>
+         <widget class="QComboBox" name="comboBox_3"/>
         </item>
         <item>
          <widget class="QLabel" name="label_5">
